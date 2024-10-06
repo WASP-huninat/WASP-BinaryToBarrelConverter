@@ -1,22 +1,20 @@
-﻿namespace BinaryToBarrelConverter
+﻿namespace WASP.BinaryToBarrelConverter
 {
     internal class Logic
     {
-        public Form1 Form {  get; set; }
-        public char Direction {  get; set; }
+        public Rootobject rootobject {  get; set; }
+        public TextBox TextBox { get; set; }
 
-        public TextBox textBox { get; set; }
+        public string DataPackFilePath { get; set; }
 
         public void RunConversion(List<string> text)
         {
-            var dataPackFilePath = Path.Combine(Path.GetTempPath(), "LoadRom\\");
+            new CreateDataPackFileStructure().CreateEverything(DataPackFilePath, rootobject.Pack_format);
 
-            new CreateDataPackFileStructure().CreateEverything(dataPackFilePath);
-
-            new LookupTables().ChangeOfCords(Direction);
+            new LookupTables().ChangeOfCords(rootobject.Direction.First());
 
             // Test Code
-            textBox.AppendText(Environment.NewLine + Environment.NewLine);
+            TextBox.AppendText(Environment.NewLine + Environment.NewLine);
 
             // Write To Barrel
             int maxIterations = 0;
@@ -48,7 +46,7 @@
 
 
                         // Test Code
-                        textBox.AppendText(hexAsInt.ToString() + ", ");
+                        TextBox.AppendText(hexAsInt.ToString() + ", ");
                     }
                 }
             }

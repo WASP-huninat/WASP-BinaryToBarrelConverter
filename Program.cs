@@ -1,4 +1,4 @@
-namespace BinaryToBarrelConverter
+namespace WASP.BinaryToBarrelConverter
 {
     internal static class Program
     {
