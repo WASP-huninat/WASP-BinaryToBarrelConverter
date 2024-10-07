@@ -10,8 +10,6 @@ namespace WASP.BinaryToBarrelConverter
         private readonly JsonLogic _jsonLogic = new JsonLogic();
         private Rootobject rootobject = new Rootobject();
 
-        public string MinecraftWorldFolderPath { get; set; }
-
         public Form1()
         {
             InitializeComponent();
@@ -29,7 +27,7 @@ namespace WASP.BinaryToBarrelConverter
         {
             _logic.TextBox = textBox1;
 
-            _logic.DataPackFilePath = Path.Combine(rootobject.MinecraftWorldFolderPath, "LoadRom\\");
+            _logic.rootobject = rootobject;
 
             toolStripTextBox1.Text = rootobject.Pack_format.ToString();
             toolStripMenuItem2.Text = rootobject.MinecraftWorldFolderPath;
