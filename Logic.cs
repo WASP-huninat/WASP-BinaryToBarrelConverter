@@ -1,5 +1,4 @@
-﻿using System.CodeDom.Compiler;
-using System.Text;
+﻿using System.Text;
 
 namespace WASP.BinaryToBarrelConverter
 {
@@ -47,7 +46,7 @@ namespace WASP.BinaryToBarrelConverter
                 // Steps 4 lines at a time and write the Hex Value into a Barrel
                 for (int j = i; j < maxIterations; j += 4)
                 {
-                int y = 0;
+                    int y = 0;
 
                     x += _lookupTables.ChangeOfCords(direction)[0];
                     z += _lookupTables.ChangeOfCords(direction)[1];
@@ -109,16 +108,23 @@ namespace WASP.BinaryToBarrelConverter
         private static string GetBlockToPlace(int hexAsInt)
         {
             string items = "";
-            for (int i = 0; i < hexAsInt; i++)
+            if (hexAsInt > 0)
             {
-                if (i > 0)
+                for (int i = 0; i < hexAsInt; i++)
                 {
-                    items += ",";
-                }
+                    if (i > 0)
+                    {
+                        items += ",";
+                    }
 
-                items += $"{{ Slot: {i},id: \"minecart\",Count: 1}}";
+                    items += $"{{ Slot: {i},id: \"minecart\",Count: 1}}";
+                }
+                return $"barrel{{Items:[{items}]}}";
             }
-            return $"barrel{{Items:[{items}]}}";
+            else
+            {
+                return "light_gray_wool";
+            }
         }
         #endregion
     }

@@ -1,4 +1,3 @@
-using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 
 namespace WASP.BinaryToBarrelConverter
@@ -51,6 +50,7 @@ namespace WASP.BinaryToBarrelConverter
         {
             folderBrowserDialog1.ShowDialog();
             rootobject.MinecraftWorldFolderPath = folderBrowserDialog1.SelectedPath;
+            toolStripMenuItem2.Text = folderBrowserDialog1.SelectedPath;
             _jsonLogic.SaveJsonFile(rootobject);
         }
 

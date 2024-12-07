@@ -5,7 +5,10 @@
         public void CreateEverything(string dataPackFilePath, int packFormat)
         {
             Directory.CreateDirectory($"{dataPackFilePath}\\minecraft\\tags\\functions");
+            if (Directory.Exists($"{dataPackFilePath}\\data\\placing\\functions"))
+            {
             Directory.Delete($"{dataPackFilePath}\\data\\placing\\functions", true );
+            }
             Directory.CreateDirectory($"{dataPackFilePath}\\data\\placing\\functions");
 
             File.WriteAllText($"{dataPackFilePath}\\pack.mcmeta", $"{{\r\n\t\"pack\":\t{{\r\n\t\t\"pack_format\":\t{packFormat},\r\n\t\t\"description\":\t\"ROM Load\"\r\n\t}}\r\n}}");

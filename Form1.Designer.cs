@@ -37,7 +37,7 @@
             toolStripMenuItem2 = new ToolStripMenuItem();
             directionToolStripMenuItem = new ToolStripMenuItem();
             toolStripComboBox1 = new ToolStripComboBox();
-            bytesPerROMAddressToolStripMenuItem = new ToolStripMenuItem();
+            instructionCountPerROMAddressToolStripMenuItem = new ToolStripMenuItem();
             toolStripTextBox2 = new ToolStripTextBox();
             btnStartConverting = new ToolStripButton();
             folderBrowserDialog1 = new FolderBrowserDialog();
@@ -74,7 +74,7 @@
             // 
             toolStripDropDownButton1.BackColor = Color.FromArgb(64, 64, 64);
             toolStripDropDownButton1.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            toolStripDropDownButton1.DropDownItems.AddRange(new ToolStripItem[] { datapackFormatToolStripMenuItem, worldFolderToolStripMenuItem, directionToolStripMenuItem, bytesPerROMAddressToolStripMenuItem });
+            toolStripDropDownButton1.DropDownItems.AddRange(new ToolStripItem[] { datapackFormatToolStripMenuItem, worldFolderToolStripMenuItem, directionToolStripMenuItem, instructionCountPerROMAddressToolStripMenuItem });
             toolStripDropDownButton1.ForeColor = Color.FromArgb(224, 224, 224);
             toolStripDropDownButton1.ImageScaling = ToolStripItemImageScaling.None;
             toolStripDropDownButton1.ImageTransparentColor = Color.Transparent;
@@ -88,7 +88,7 @@
             datapackFormatToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox1 });
             datapackFormatToolStripMenuItem.ForeColor = Color.FromArgb(224, 224, 224);
             datapackFormatToolStripMenuItem.Name = "datapackFormatToolStripMenuItem";
-            datapackFormatToolStripMenuItem.Size = new Size(243, 26);
+            datapackFormatToolStripMenuItem.Size = new Size(320, 26);
             datapackFormatToolStripMenuItem.Text = "Datapack Format";
             // 
             // toolStripTextBox1
@@ -105,14 +105,13 @@
             worldFolderToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripMenuItem2 });
             worldFolderToolStripMenuItem.ForeColor = Color.FromArgb(224, 224, 224);
             worldFolderToolStripMenuItem.Name = "worldFolderToolStripMenuItem";
-            worldFolderToolStripMenuItem.Size = new Size(243, 26);
+            worldFolderToolStripMenuItem.Size = new Size(320, 26);
             worldFolderToolStripMenuItem.Text = "World Folder";
             // 
             // toolStripMenuItem2
             // 
             toolStripMenuItem2.Name = "toolStripMenuItem2";
-            toolStripMenuItem2.Size = new Size(96, 26);
-            toolStripMenuItem2.Text = " ";
+            toolStripMenuItem2.Size = new Size(83, 26);
             toolStripMenuItem2.Click += toolStripMenuItem2_Click;
             // 
             // directionToolStripMenuItem
@@ -121,7 +120,7 @@
             directionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripComboBox1 });
             directionToolStripMenuItem.ForeColor = Color.FromArgb(224, 224, 224);
             directionToolStripMenuItem.Name = "directionToolStripMenuItem";
-            directionToolStripMenuItem.Size = new Size(243, 26);
+            directionToolStripMenuItem.Size = new Size(320, 26);
             directionToolStripMenuItem.Text = "Direction";
             // 
             // toolStripComboBox1
@@ -131,14 +130,14 @@
             toolStripComboBox1.Size = new Size(121, 28);
             toolStripComboBox1.TextChanged += toolStripComboBox1_TextChanged;
             // 
-            // bytesPerROMAddressToolStripMenuItem
+            // instructionCountPerROMAddressToolStripMenuItem
             // 
-            bytesPerROMAddressToolStripMenuItem.BackColor = Color.FromArgb(64, 64, 64);
-            bytesPerROMAddressToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox2 });
-            bytesPerROMAddressToolStripMenuItem.ForeColor = Color.FromArgb(224, 224, 224);
-            bytesPerROMAddressToolStripMenuItem.Name = "bytesPerROMAddressToolStripMenuItem";
-            bytesPerROMAddressToolStripMenuItem.Size = new Size(243, 26);
-            bytesPerROMAddressToolStripMenuItem.Text = "Bytes Per ROM address";
+            instructionCountPerROMAddressToolStripMenuItem.BackColor = Color.FromArgb(64, 64, 64);
+            instructionCountPerROMAddressToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripTextBox2 });
+            instructionCountPerROMAddressToolStripMenuItem.ForeColor = Color.FromArgb(224, 224, 224);
+            instructionCountPerROMAddressToolStripMenuItem.Name = "instructionCountPerROMAddressToolStripMenuItem";
+            instructionCountPerROMAddressToolStripMenuItem.Size = new Size(320, 26);
+            instructionCountPerROMAddressToolStripMenuItem.Text = "Instruction count per ROM address";
             // 
             // toolStripTextBox2
             // 
@@ -200,7 +199,7 @@
         private ToolStripMenuItem toolStripMenuItem2;
         private ToolStripMenuItem directionToolStripMenuItem;
         private ToolStripComboBox toolStripComboBox1;
-        private ToolStripMenuItem bytesPerROMAddressToolStripMenuItem;
+        private ToolStripMenuItem instructionCountPerROMAddressToolStripMenuItem;
         private ToolStripButton btnStartConverting;
         private ProgressBar progressBar1;
         private ToolStripTextBox toolStripTextBox2;
